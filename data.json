@@ -1,0 +1,367 @@
+[
+{
+  "model": "portfolio.profile",
+  "pk": 1,
+  "fields": {
+    "name": "Gregory Ochieng Otieno",
+    "headline": "Mechatronics Engineering Student, Certified Full Stack Software Developer",
+    "about": "Motivated Mechatronics Engineering student and a certified Full Stack Developer with expertise in building scalable web and mobile applications using Django, Python, HTML, CSS, JavaScript, Kotlin, GitHub, integrated databases, integrated APIs. Currently learning electronics, control systems, automation, robotics, embedded systems, PLC programming, microcontrollers, sensors, actuators and CAD design. I also have knowledge in Firebase integration, Mpesa integration and basic Machine Learning. I'm passionate about innovations, learning and development of my skills.",
+    "photo": "profile/Screenshot_20260527-223353_2.png",
+    "location": "Muranga",
+    "email": "gregorydavid373@gmail.com",
+    "github": "https://github.com/Black-Ace-Gr",
+    "linkedin": "http://www.linkedin.com/in/eng-greg-otieno",
+    "cv_file": "cv/GREGORY_OCHIENG_OTIENO_1791488051938.pdf"
+  }
+},
+{
+  "model": "portfolio.education",
+  "pk": 1,
+  "fields": {
+    "institution": "Emobilis Technology Training Institute",
+    "program": "Full Stack Software development",
+    "start_year": 2025,
+    "end_year": 2025,
+    "details": "Full Stack Development course has equipped me with skills to build complete web and mobile applications. I was able to learn frontend development with HTML, CSS and JavaScript, backend development with Python and Django, and mobile app development using Kotlin and Android Studio. The course also covers practical integrations such as Firebase for authentication and data storage, M-Pesa API for payments, and GitHub for version control. I also introduced myself to machine learning with Python and basic cloud deployment concepts to take projects from development to launch.",
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.education",
+  "pk": 2,
+  "fields": {
+    "institution": "Murang'a University Of Technology",
+    "program": "BSC Mechatronic Engoneering",
+    "start_year": 2025,
+    "end_year": null,
+    "details": "Bachelor of Science in Mechatronics Engineering program combines mechanical engineering, electronics, computer systems, and control engineering to train graduates who can design and automate intelligent systems. I studied core areas including mechanics, thermodynamics, circuits, microcontrollers, sensors, actuators, robotics, PLC programming, and embedded systems. The course also covers software tools for modeling, simulation, and data analysis, with hands-on projects in automation, manufacturing, and machine design. I am equipped to work in industries such as manufacturing, robotics, automotive, renewable energy, and industrial automation, with skills to develop, maintain, and optimize Mechatronic systems from concept to deployment.",
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.achievement",
+  "pk": 1,
+  "fields": {
+    "title": "Certification for Software Development",
+    "date": "2025-11-14",
+    "description": "graduated from Emobilis Technology Training Institute. I was officially granted the power to code",
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.achievement",
+  "pk": 3,
+  "fields": {
+    "title": "High School Certificates",
+    "date": "2024-11-24",
+    "description": "Having done my KCSE, I had received several certificates from the school over the four years. \r\nMathematics - 3 certificates in total, all from Mathematics contests\r\nPhysics - 1 certificate, 2nd student in the Sub-county examinations, form 4\r\nEnglish - 1 certificate, the best student in the English contest, form 3\r\nScience Contest - Presented a physics project (perpetual motion machine), 3rd student sub-county level, 4th student county level, form 3\r\nLeadership - Deputy School Captain In Charge Of Discipline, Sawagongo High School\r\nIntegrity - Certificate of integrity, Sawagongo High School\r\nBusiness Studies - 2 certificates, (form 3 & 4) being among the best in the contests, and best in sub-county examinations\r\nAcademic Excellence - 4th student in the sub-county examinations, a total of 4 certificates were awarded to me on the release of the results",
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 1,
+  "fields": {
+    "title": "Ace8Ball",
+    "slug": "ace8ball",
+    "category": "game",
+    "summary": "pool table game for android phones",
+    "description": "The android game allows players to either play a match on the same device or to play against each other by connecting through LAN Wi-Fi. The players can also decide to play a tournament, which allows up to 8 players to play against each other while giving them scores",
+    "tech": "Kotlin",
+    "date": null,
+    "live_url": "",
+    "repo_url": "",
+    "cover": "projects/covers/WhatsApp_Image_2026-10-09_at_10.28.47.jpeg",
+    "published": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 2,
+  "fields": {
+    "title": "Kukulink",
+    "slug": "kukulink",
+    "category": "ai",
+    "summary": "poultry sale and purchase platform",
+    "description": "the web platform allows for farmers to advertise poultry products to their clients. The project also has an AI assistant to help the users navigate through it easily.",
+    "tech": "Django, Neon PostgreSQL database, AI integration",
+    "date": null,
+    "live_url": "https://kuku-link-ke.vercel.app",
+    "repo_url": "",
+    "cover": "projects/covers/hero.57103aa7600d.jpeg",
+    "published": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 3,
+  "fields": {
+    "title": "Kanairo Deliveries",
+    "slug": "kanairo-deliveries",
+    "category": "web",
+    "summary": "delivery platform",
+    "description": "secured delivery platform",
+    "tech": "Django, Neon database",
+    "date": null,
+    "live_url": "https://kanairo-deliveries.vercel.app",
+    "repo_url": "",
+    "cover": "projects/covers/WhatsApp_Image_2026-10-09_at_10.46.32.jpeg",
+    "published": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 4,
+  "fields": {
+    "title": "Jokibo Interior Design",
+    "slug": "jokibo-interior-design",
+    "category": "web",
+    "summary": "business landing page",
+    "description": "business landing page for an interior design brand",
+    "tech": "HTML, CSS, JavaScript",
+    "date": null,
+    "live_url": "https://smart-home-interior-design.vercel.app/",
+    "repo_url": "",
+    "cover": "projects/covers/WhatsApp_Image_2026-10-09_at_10.43.52.jpeg",
+    "published": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 5,
+  "fields": {
+    "title": "AceDrive",
+    "slug": "acedrive",
+    "category": "mobile",
+    "summary": "driving school paractical and theory app",
+    "description": "android application for usage by driving school students for theory learning and practical parts of the course",
+    "tech": "Kotlin",
+    "date": null,
+    "live_url": "",
+    "repo_url": "",
+    "cover": "projects/covers/WhatsApp_Image_2026-10-09_at_10.35.24.jpeg",
+    "published": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 6,
+  "fields": {
+    "title": "Niko Kadi",
+    "slug": "niko-kadi",
+    "category": "game",
+    "summary": "card game",
+    "description": "basic card game, similar to UNO, for android devices",
+    "tech": "Kotlin",
+    "date": null,
+    "live_url": "",
+    "repo_url": "",
+    "cover": "projects/covers/WhatsApp_Image_2026-10-09_at_10.28.58.jpeg",
+    "published": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 7,
+  "fields": {
+    "title": "AceLensAI",
+    "slug": "ace-risk-ai",
+    "category": "mobile",
+    "summary": "financial monitor",
+    "description": "with the users' consent, it reads Mpesa messages and outputs the data in in a graph, analyses the trends and provides a detailed summary on areas of weaknesses and strengths",
+    "tech": "Kotlin",
+    "date": "2026-06-10",
+    "live_url": "",
+    "repo_url": "",
+    "cover": "projects/covers/WhatsApp_Image_2026-10-09_at_11.11.22.jpeg",
+    "published": true,
+    "order": 0
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 1,
+  "fields": {
+    "project": 6,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.13_1.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 2,
+  "fields": {
+    "project": 6,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.13.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 3,
+  "fields": {
+    "project": 5,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.27.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 4,
+  "fields": {
+    "project": 5,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.28_1.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 5,
+  "fields": {
+    "project": 5,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.28_2.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 6,
+  "fields": {
+    "project": 5,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.28_3.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 7,
+  "fields": {
+    "project": 5,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.28_4.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 8,
+  "fields": {
+    "project": 5,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.28.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 9,
+  "fields": {
+    "project": 4,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.41.14.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 10,
+  "fields": {
+    "project": 4,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.41.42.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 11,
+  "fields": {
+    "project": 4,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.42.01.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 12,
+  "fields": {
+    "project": 2,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.59.09.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 13,
+  "fields": {
+    "project": 2,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.59.32.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 14,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.16.40.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 15,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.01_1.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 16,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.01_2.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 17,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10_KFgYAqn.17.01_2.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 18,
+  "fields": {
+    "project": 1,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.01.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 19,
+  "fields": {
+    "project": 7,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.37.jpeg",
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.projectimage",
+  "pk": 20,
+  "fields": {
+    "project": 7,
+    "image": "projects/gallery/WhatsApp_Image_2026-10-09_at_10.17.37_1.jpeg",
+    "caption": ""
+  }
+}
+]
