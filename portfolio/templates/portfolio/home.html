@@ -1,0 +1,105 @@
+{% extends "portfolio/base.html" %}
+{% block content %}
+<style>
+/* Photo layout lives here so a stale cached stylesheet cannot break it */
+.titleblock{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.titleblock .tb-main{grid-column:1/-1}
+.titleblock.has-photo .tb-main{grid-column:1/3;grid-row:1;border-right:1px solid var(--ink);display:flex;flex-direction:column;justify-content:flex-end}
+.tb-portrait{position:relative;overflow:hidden;min-width:0;margin:0;grid-column:3;grid-row:1;aspect-ratio:4/5;background:var(--panel);border-bottom:1px solid var(--ink)}
+.tb-portrait::before{content:"";position:absolute;inset:-24px;background:var(--bg) center/cover no-repeat;filter:blur(26px);opacity:.55}
+.tb-portrait img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain}
+@media (max-width:760px){
+  .titleblock{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .titleblock.has-photo .tb-main{grid-column:1/-1;grid-row:2;border-right:0}
+  .tb-portrait{grid-column:1/-1;grid-row:1;aspect-ratio:1/1;max-height:440px}
+}
+</style>
+{% if not profile %}
+<section class="wrap empty">
+  <h1>Your CV is empty</h1>
+  <p>Sign in to the admin, create your profile, then add education, achievements and projects.</p>
+</section>
+{% else %}
+<header class="wrap">
+  <div class="titleblock{% if profile.photo %} has-photo{% endif %}">
+    <div class="tb-main">
+      <h1>{{ profile.name }}</h1>
+      <p class="headline">{{ profile.headline }}</p>
+    </div>
+    {% if profile.photo %}<figure class="tb-portrait" style="--bg:url('{{ profile.photo.url }}')"><img src="{{ profile.photo.url }}" alt="Portrait of {{ profile.name }}"></figure>{% endif %}
+    {% if profile.location %}<div class="tb-cell"><span>Based in</span>{{ profile.location }}</div>{% endif %}
+    {% if profile.email %}<div class="tb-cell"><span>Email</span><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></div>{% endif %}
+    {% if profile.github or profile.linkedin %}
+    <div class="tb-cell"><span>Elsewhere</span>
+      {% if profile.github %}<a href="{{ profile.github }}" rel="noopener">GitHub</a>{% endif %}
+      {% if profile.github and profile.linkedin %}, {% endif %}
+      {% if profile.linkedin %}<a href="{{ profile.linkedin }}" rel="noopener">LinkedIn</a>{% endif %}
+    </div>{% endif %}
+    {% if profile.cv_file %}<div class="tb-cell"><span>Full CV</span><a href="{{ profile.cv_file.url }}">Download PDF</a></div>{% endif %}
+  </div>
+</header>
+
+{% if profile.about %}
+<section class="wrap sheet" id="about">
+  <h2>About me</h2>
+  <div class="body prose">{{ profile.about|linebreaks }}</div>
+</section>
+{% endif %}
+
+{% if education %}
+<section class="wrap sheet" id="education">
+  <h2>Education</h2>
+  <div class="body">
+    {% for e in education %}
+    <article class="entry">
+      <p class="when">{{ e.start_year }} to {% if e.end_year %}{{ e.end_year }}{% else %}present{% endif %}</p>
+      <h3>{{ e.program }}</h3>
+      <p class="where">{{ e.institution }}</p>
+      {% if e.details %}<div class="prose">{{ e.details|linebreaks }}</div>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if achievements %}
+<section class="wrap sheet" id="achievements">
+  <h2>Achievements</h2>
+  <div class="body">
+    {% for a in achievements %}
+    <article class="entry">
+      {% if a.date %}<p class="when">{{ a.date|date:"F Y" }}</p>{% endif %}
+      <h3>{{ a.title }}</h3>
+      {% if a.description %}<div class="prose">{{ a.description|linebreaks }}</div>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if sections %}
+<section class="wrap sheet" id="projects">
+  <h2>Projects</h2>
+  <div class="body">
+    {% for s in sections %}
+    <div class="group" id="{{ s.slug }}">
+      <h3 class="group-title">{{ s.label }}</h3>
+      <div class="grid">
+        {% for p in s.projects %}
+        <a class="card" href="{% url 'project' p.slug %}">
+          {% if p.cover %}<img src="{{ p.cover.url }}" alt="" loading="lazy">{% else %}<div class="noimg"></div>{% endif %}
+          <div class="card-body">
+            <h4>{{ p.title }}</h4>
+            <p>{{ p.summary }}</p>
+            {% if p.tech_list %}<ul class="tags">{% for t in p.tech_list %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{% endif %}
+{% endblock %}

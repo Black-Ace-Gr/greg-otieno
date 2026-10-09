@@ -1,0 +1,29 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% if profile %}{{ profile.name }}{% else %}My CV{% endif %}{% endblock %}</title>
+  <meta name="description" content="{% if profile %}{{ profile.headline }}{% endif %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+</head>
+<body>
+  <canvas id="bg3d" aria-hidden="true"></canvas>
+  <nav class="wrap topnav" aria-label="Main">
+    <a href="{% url 'home' %}" class="brand">{% if profile %}{{ profile.name }}{% else %}Home{% endif %}</a>
+    <span class="links">
+      <a href="{% url 'home' %}#about">About</a>
+      <a href="{% url 'home' %}#education">Education</a>
+      <a href="{% url 'home' %}#achievements">Achievements</a>
+      <a href="{% url 'home' %}#projects">Projects</a>
+    </span>
+  </nav>
+  <main>{% block content %}{% endblock %}</main>
+  <footer class="wrap foot">{% if profile %}{{ profile.name }}{% endif %}</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="{% static 'portfolio/bg3d.js' %}" defer></script>
+</body>
+</html>
